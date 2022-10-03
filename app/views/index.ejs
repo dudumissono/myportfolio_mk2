@@ -1,10 +1,18 @@
 <!DOCTYPE>
 <html lang="en">
     <head>
+        <%- include('layout/head.ejs') %>
         <title><%= title %></title>
     </head>
     <body>
-        <h1><%= title %></h1>
-        <p><%= description %></p>
+    <div>
+        <%- include('layout/header.ejs') %>
+        <main>
+            <%- include('layout/navbar.ejs') %>
+            <h1><%= title %></h1>
+            <p><%= description %></p>
+        </main>
+        <%- include('layout/footer.ejs') %>
+    </div>
     </body>
 </html>
