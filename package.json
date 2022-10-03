@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/dudumissono/myportfolio_mk2/issues"
   },
-  "homepage": "https://github.com/dudumissono/myportfolio_mk2#readme"
+  "homepage": "https://github.com/dudumissono/myportfolio_mk2#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.3",
+    "morgan": "^1.10.0"
+  }
 }
