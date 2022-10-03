@@ -1,3 +1,9 @@
+/*
+Student: Eduardo Missono
+Student ID: 301200673
+Date: Oct 03, 2022
+ */
+
 const config = require('./env/development');
 const session = require('express-session');
 const express = require('express');

@@ -1,3 +1,9 @@
+/*
+Student: Eduardo Missono
+Student ID: 301200673
+Date: Oct 03, 2022
+ */
+
 const index = require("../controllers/index.server.controller");
 const about = require("../controllers/about.server.controller");
 const projects = require("../controllers/projects.server.controller");
