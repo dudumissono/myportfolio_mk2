@@ -33,9 +33,5 @@ module.exports = function () {
     app.use(express.static('./public'));
 
     require('../app/routes/index.server.routes')(app);
-    require('../app/routes/about.server.routes')(app);
-    require('../app/routes/projects.server.routes')(app);
-    require('../app/routes/services.server.routes')(app);
-    require('../app/routes/contact.server.routes')(app);
     return app;
 }

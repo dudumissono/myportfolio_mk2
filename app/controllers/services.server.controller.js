@@ -6,7 +6,7 @@ exports.render = function (req, res) {
     req.session.lastVisit = new Date();
 
     res.render('services', {
-        title: 'Hello Mr. Wick',
+        title: 'Services',
         description: 'Mr. Anderson'
     })
 };
