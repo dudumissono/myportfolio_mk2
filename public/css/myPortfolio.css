@@ -34,7 +34,7 @@ header {
 footer {
     background-color: #edc7b7;
     text-align: center;
-    color: whitesmoke;
+    color: #123c69;
     padding: 1px;
     border-radius: 5px;
 }
@@ -77,5 +77,25 @@ a:hover {
 
 .fa-file-pdf {
     color: #ac3b61;
+}
+
+.fa-file-pdf:hover {
+    color: #123c69;
+}
+
+.fa-linkedin, .fa-github {
+    float: right;
+    padding-top: 10px;
+    padding-left: 15px;
+
+}
+
+.logo {
+    font-size: large;
+    font-weight: bold;
+}
+
+.references {
+    font-size: small;
 }
 
