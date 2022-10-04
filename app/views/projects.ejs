@@ -13,11 +13,42 @@
         <p><%= description %></p>
         <hr>
         <h4><%= projectOne.title %></h4>
-        <p><%= projectOne.description %></p>
+        <p>
+            <table>
+                <tr>
+                    <td><%= projectOne.description %></td>
+                    <td>
+                        <img class="projectImageOne" src="<%= projectOne.img %>" alt="<%= projectOne.alt %>">
+                        <a class="references"href="<%= projectTwo.references %>" target="_blank">Reference: Internship Image</a>
+                    </td>
+                </tr>
+            </table>
+        </p>
         <hr>
-        <h4><%= projectOne.title %></h4>
-        <p><%= projectOne.description %></p>
+        <h4><%= projectTwo.title %></h4>
+        <p>
+        <table>
+            <tr>
+                <td>
+                    <img class="projectImageTwo" src="<%= projectTwo.img %>" alt="<%= projectTwo.alt %>">
+                    <a class="references"href="<%= projectTwo.references %>" target="_blank">Reference: Advertising Image</a>
+                </td>
+                <td>
+                    <%= projectTwo.description %>
+                    <p>
+                        Satelite Audio <a href="https://www.instagram.com/sateliteaudio/" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a> | Lucha Libre Audio <a href="https://www.instagram.com/luchalibreaudio/?hl=en" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        </p>
+        <hr>
+        <h4><%= projectThree.title %></h4>
+        <p><%= projectThree.description %></p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1mHszNMGcPs301foHfLEMj?utm_source=generator" width="49.7%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4Gw5VlWHPySXpTsNmkguuQ?utm_source=generator" width="49.7%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </main>
+    <br>
     <%- include('partials/footer.ejs') %>
 </div>
 </body>

@@ -13,16 +13,27 @@ exports.render = function (req, res) {
 
     res.render('projects', {
         title: 'Projects',
-        description: 'As my tech career is just beginning, I decided to list here on tech job and two other projects that I’ve worked on before.',
+        description: 'As my tech career is just beginning, I decided to list here one tech job and two other projects that I’ve worked on before.',
         projectOne: {
             title: 'Software Development',
-            img: '',
-            description: 'Part-time internship in Canada. I’m working on a project that was built using low-code tools, but I’m able to exercise programming logic and write some custom code inside the software.'
+            img: '/img/internship.png',
+            alt: 'Internship',
+            description: 'Part-time internship in Canada. I’m working on a project that was built using low-code tools, but in this project, I’m constantly exercising programming logic and writing some custom code within the software.',
+            references: 'https://www.pixelstech.net/article/1328089711-A-brief-guide-to-tech-internships'
         },
         projectTwo: {
-            img: '',
-            description: ''
+            title: 'Audio Production Manager',
+            img: '/img/advertising.jpeg',
+            alt: 'Advertising',
+            description: 'My last two stops as an audio production manager were in Satelite Audio and Lucha Libre Audio. I was responsible for getting the briefing from the client, then pass along to the team, and check all the material to make sure that everything was according to the client’s requirements. Although I did not participate in their recent works, there are a lot of ad campaigns in their reel that I had the opportunity to be part of.',
+            references: 'https://www.pixelstech.net/article/1328089711-A-brief-guide-to-tech-internships'
         },
-        references: ''
+        projectThree: {
+            title: 'Audio Engineer',
+            img: '',
+            alt: '',
+            description: 'These two records are very special to me. Michel’s album was one of the first opportunities that I had to sit in the front char of a recording session. Biquini’s album I worked as an assistant to the recording engineer, and it was special because it was the first time that I had the opportunity to work with a major artist in Brazil. Fun fact, in track one (“Zé Ninguém”) at the 3’09’’mark, you will hear multiple voices and one of them is mine.',
+            references: ''
+        }
     })
 };
