@@ -13,6 +13,6 @@ exports.render = function (req, res) {
 
     res.render('about', {
         title: 'About Me',
-        description: 'Burning love'
+        description: 'Hey, my name is Eduardo and I’m from Brazil. I’m a former audio engineer and I used to work from live shows to studio recordings. For the last six years, I’ve worked as an audio production manager and this experience was incredible as I had the opportunity to lead teams and work directly with clients.'
     })
 };

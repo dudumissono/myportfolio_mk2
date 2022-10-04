@@ -10,7 +10,22 @@
     <main>
         <%- include('partials/navbar.ejs') %>
         <h3><%= title %></h3>
-        <p><%= description %></p>
+        <table>
+            <tr>
+                <td>
+                    <p><%= description %></p>
+                    <p>
+                        For the full resume, click the PDF icon:
+                        <a href="/img/EDM_Resume.pdf" download=""><i class="fa-regular fa-file-pdf fa-2xl"></i></a>
+                    </p>
+
+                </td>
+                <td>
+                    <img class="mugShot" src="/img/EDM.png" alt="Eduardo">
+                </td>
+            </tr>
+        </table>
+        <br>
     </main>
     <%- include('partials/footer.ejs') %>
 </div>
