@@ -56,3 +56,16 @@ nav a{
 a:hover {
     color: #123c69;
 }
+
+.readMore input{
+    padding: 5px;
+    color: whitesmoke;
+    background-color: #ac3b61;
+    border-radius: 5px;
+    border: none;
+}
+
+.readMore input:hover{
+    color: #ac3b61;
+    background-color: #edc7b7;
+}

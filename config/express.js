@@ -38,6 +38,6 @@ module.exports = function () {
 
     app.use(express.static('./public'));
 
-    require('../app/routes/index.server.routes')(app);
+    require('../app/routes')(app);
     return app;
 }
