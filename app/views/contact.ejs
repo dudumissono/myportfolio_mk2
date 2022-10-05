@@ -9,8 +9,49 @@
     <%- include('partials/header.ejs') %>
     <main>
         <%- include('partials/navbar.ejs') %>
-        <h1><%= title %></h1>
+        <h3><%= title %></h3>
         <p><%= description %></p>
+        <table>
+            <tr>
+                <td class="contactForm">
+                    <form action="" id="contactFormData">
+                        <p>
+                            <label for="firstName">First Name</label>
+                            <input class="contactFormInput" id="firstName" name="firstName" type="text" tabindex="1" required="required" placeholder="John">
+
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name</label>
+                            <input class="contactFormInput" id="lastName" name="lastName" type="text" tabindex="3" required="required" placeholder="Wick">
+                        </p>
+                        <p>
+                            <label for="contactNumber">Contact Number</label>
+                            <input class="contactFormInput" id="contactNumber" name="contactNumber" type="text" tabindex="5" required="required" placeholder="(666) 777-5544">
+                        </p>
+                        <p>
+                            <label for="message">Message</label>
+                            <textarea class="contactFormInput" id="message" name="message" tabindex="7" placeholder="--- Enter you message ---"></textarea>
+                        </p>
+                        <br/>
+                        <hr>
+                        <p id="buttons">
+                            <input class="buttons" id="submitValue" type="submit" name="btnSubmit" value="Submit" tabindex="9">
+                            <input class="buttons" id="reset" type="reset" name="btnReset" value="Clear" tabindex="11">
+                        </p>
+                    </form>
+                </td>
+                <td class="contactInfo">
+                    <p><%= contactInfo.name %></p>
+                    <p><%= contactInfo.phone %></p>
+                    <p><%= contactInfo.email %></p>
+                    <p>
+                        <a href="https://github.com/dudumissono" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
+                        <a href="https://www.linkedin.com/in/eduardomissono/" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br/>
     </main>
     <%- include('partials/footer.ejs') %>
 </div>

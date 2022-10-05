@@ -11,8 +11,13 @@ exports.render = function (req, res) {
 
     req.session.lastVisit = new Date();
 
-    res.render('services', {
+    res.render('contact', {
         title: 'Contact',
-        description: 'Mr. Anderson'
+        description: 'Please fill out the form and I will return it as soon as possible. If you prefer you can contact me directly. Information below.',
+        contactInfo: {
+            name: 'Eduardo Missono',
+            phone: '(416) 731-4990',
+            email: 'missono.eduardo@gmail.com'
+        }
     })
 };
