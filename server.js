@@ -10,7 +10,7 @@ const express = require('./config/express');
 const app = express();
 
 const HOST = 'localhost';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT);
 app.post('/contact', (req, res) => {

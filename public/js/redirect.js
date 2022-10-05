@@ -7,15 +7,17 @@ Date: Oct 03, 2022
 function messageSubmitted() {
     let messageInformation = [];
     let firstName = document.getElementById('firstName').value;
-    messageInformation.push(firstName);
     let LastName = document.getElementById('lastName').value;
-    messageInformation.push(LastName);
     let contactNumber = document.getElementById('contactNumber').value;
-    messageInformation.push(contactNumber);
     let message = document.getElementById('message').value;
+
+    messageInformation.push(firstName);
+    messageInformation.push(LastName);
+    messageInformation.push(contactNumber);
     messageInformation.push(message);
-    alert('Message delivered. I will contact you as soon as I can.');
     console.log(messageInformation);
+
+    alert('Message delivered. I will contact you as soon as I can.');
 }
 
 function createEventListeners() {
