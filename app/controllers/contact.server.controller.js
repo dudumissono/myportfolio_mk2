@@ -17,7 +17,9 @@ exports.render = function (req, res) {
         contactInfo: {
             name: 'Eduardo Missono',
             phone: '(416) 731-4990',
-            email: 'missono.eduardo@gmail.com'
+            email: 'missono.eduardo@gmail.com',
+            linkedin: 'https://github.com/dudumissono',
+            github: 'https://www.linkedin.com/in/eduardomissono/'
         }
     })
 };

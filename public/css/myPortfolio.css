@@ -184,3 +184,15 @@ a:hover {
 .contactForm p {
     padding-right: 20px;
 }
+
+.contactPhone, .contactEmail {
+    text-decoration: none;
+    color: black;
+}
+
+.contactPhone:hover, .contactEmail:hover {
+    font-weight: bold;
+    color: #ac3b61;
+}
+
+

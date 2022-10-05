@@ -14,11 +14,10 @@
         <table>
             <tr>
                 <td class="contactForm">
-                    <form action="" id="contactFormData">
+                    <form action="" method="post" id="contactFormData">
                         <p>
                             <label for="firstName">First Name</label>
                             <input class="contactFormInput" id="firstName" name="firstName" type="text" tabindex="1" required="required" placeholder="John">
-
                         </p>
                         <p>
                             <label for="lastName">Last Name</label>
@@ -42,11 +41,11 @@
                 </td>
                 <td class="contactInfo">
                     <p><%= contactInfo.name %></p>
-                    <p><%= contactInfo.phone %></p>
-                    <p><%= contactInfo.email %></p>
+                    <p><a class="contactPhone" href="tel:<%= contactInfo.phone %>"><%= contactInfo.phone %></a></p>
+                    <p><a class="contactEmail" href="mailto:<%= contactInfo.email %>"><%= contactInfo.email %></a></p>
                     <p>
-                        <a href="https://github.com/dudumissono" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
-                        <a href="https://www.linkedin.com/in/eduardomissono/" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
+                        <a href="<%= contactInfo.linkedin %>" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
+                        <a href="<%= contactInfo.github %>" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
                     </p>
                 </td>
             </tr>
@@ -55,5 +54,6 @@
     </main>
     <%- include('partials/footer.ejs') %>
 </div>
+<script src="/js/redirect.js"></script>
 </body>
 </html>
