@@ -1,3 +1,9 @@
+/*
+Student: Eduardo Missono
+Student ID: 301200673
+Date: Oct 03, 2022
+ */
+
 function messageSubmitted() {
     let messageInformation = [];
     let firstName = document.getElementById('firstName').value;
