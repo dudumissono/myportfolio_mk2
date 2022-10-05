@@ -9,8 +9,46 @@
     <%- include('partials/header.ejs') %>
     <main>
         <%- include('partials/navbar.ejs') %>
-        <h1><%= title %></h1>
-        <p><%= description %></p>
+        <h3><%= title %></h3>
+        <hr>
+        <table>
+            <tr>
+                <td class="servicesImages">
+                    <img class="projectImageOne" src="<%= serviceOne.img %>" alt="<%= serviceOne.alt %>">
+                    <a class="references" href="<%= serviceOne.references %>" target="_blank">Reference: Image</a>
+                </td>
+                <td>
+                    <p class="servicesTitles"><%= serviceOne.title %></p>
+                    <p><%= serviceOne.description %></p>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td>
+                    <p class="servicesTitles"><%= serviceTwo.title %></p>
+                    <p><%= serviceTwo.description %></p>
+                </td>
+                <td class="servicesImages">
+                    <img class="projectImageOne" src="<%= serviceTwo.img %>" alt="<%= serviceTwo.alt %>">
+                    <a class="references" href="<%= serviceTwo.references %>" target="_blank">Reference: Image</a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td class="servicesImages">
+                    <iframe src="<%= serviceThree.img %>" class="giphy-embed" ></iframe><br/>
+                    <a class="references" href="<%= serviceThree.references %>" target="_blank">Reference: Image</a>
+                </td>
+                <td>
+                    <p class="servicesTitles"><%= serviceThree.title %></p>
+                    <p><%= serviceThree.description %></p>
+                </td>
+            </tr>
+        </table>
     </main>
     <%- include('partials/footer.ejs') %>
 </div>

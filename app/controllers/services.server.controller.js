@@ -13,6 +13,27 @@ exports.render = function (req, res) {
 
     res.render('services', {
         title: 'Services',
-        description: 'Mr. Anderson'
+        description: '',
+        serviceOne: {
+            title: 'Back End Development',
+            img: '/img/back_end.png',
+            alt: 'Back End Development',
+            description: 'Develop the server-side part of the application. Create, code, and/or improve server-side applications always aiming for a functional and seamless experience for the end-user.',
+            references: 'https://medium.com/backenders-club/how-to-can-become-a-backend-developer-2022-3c39411197c5'
+        },
+        serviceTwo: {
+            title: 'Web Application Development',
+            img: '/img/web_application.png',
+            alt: 'Web Application',
+            description: 'Develop from top to bottom a full-functioning web application. Design, built, test and deploy an application that checks all the client’s requirements.',
+            references: 'https://appinventiv.com/blog/ways-web-application-development-changing/'
+        },
+        serviceThree: {
+            title: 'Loading...',
+            img: 'https://giphy.com/embed/l3nWhI38IWDofyDrW',
+            alt: 'Loading',
+            description: 'In time more and more services will be added to this list.',
+            references: 'https://giphy.com/gifs/thinking-l3nWhI38IWDofyDrW'
+        },
     })
 };

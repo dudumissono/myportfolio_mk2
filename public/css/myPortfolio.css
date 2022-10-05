@@ -113,3 +113,17 @@ a:hover {
     height: 150px;
 }
 
+.servicesTitles {
+    font-weight: bold;
+    color: #ac3b61;
+}
+
+.giphy-embed {
+    height: 200px;
+    width: 200px;
+    border: none;
+}
+
+.servicesImages {
+    width: 300px;
+}
