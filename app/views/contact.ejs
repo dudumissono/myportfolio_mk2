@@ -45,8 +45,10 @@
                 </td>
                 <td class="contactInfo">
                     <p><%= contactInfo.name %></p>
-                    <p><a class="contactPhone" href="tel:<%= contactInfo.phone %>"><%= contactInfo.phone %></a></p>
-                    <p><a class="contactEmail" href="mailto:<%= contactInfo.email %>"><%= contactInfo.email %></a></p>
+                    <p id="phoneIcon"><i class="fa-solid fa-phone fa-xl socialMedia"></i></p>
+                    <p><a id="phoneNumber" class="contactPhone" href="tel:<%= contactInfo.phone %>"><%= contactInfo.phone %></a></p>
+                    <p id="emailIcon"><i class="fa-solid fa-envelope fa-xl socialMedia"></i></p>
+                    <p><a id="contactEmail" class="contactEmail" href="mailto:<%= contactInfo.email %>"><%= contactInfo.email %></a></p>
                     <p>
                         <a href="<%= contactInfo.linkedin %>" target="_blank"><i class="fa-brands fa-github fa-xl socialMedia"></i></a>
                         <a href="<%= contactInfo.github %>" target="_blank"><i class="fa-brands fa-linkedin fa-xl socialMedia"></i></a>
@@ -58,6 +60,6 @@
     </main>
     <%- include('partials/footer.ejs') %>
 </div>
-<script src="/js/redirect.js"></script>
+<script src="/js/contact.js"></script>
 </body>
 </html>

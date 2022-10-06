@@ -188,11 +188,10 @@ a:hover {
 .contactPhone, .contactEmail {
     text-decoration: none;
     color: black;
+    visibility: hidden;
 }
 
 .contactPhone:hover, .contactEmail:hover {
     font-weight: bold;
     color: #ac3b61;
 }
-
-

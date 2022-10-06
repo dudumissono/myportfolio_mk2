@@ -20,12 +20,40 @@ function messageSubmitted() {
     alert('Message delivered. I will contact you as soon as I can.');
 }
 
+function showPhone() {
+    let icon = document.getElementById('phoneIcon');
+    let phone = document.getElementById('phoneNumber');
+    icon.style.visibility = 'hidden';
+    phone.style.visibility = 'visible';
+}
+
+function showEmail() {
+    let icon = document.getElementById('emailIcon');
+    let email = document.getElementById('contactEmail');
+    icon.style.visibility = 'hidden';
+    email.style.visibility = 'visible';
+}
+
 function createEventListeners() {
     let backButton = document.getElementById("submitValue");
     if (backButton.addEventListener) {
         backButton.addEventListener("click", messageSubmitted, false);
     } else if (backButton.attachEvent) {
         backButton.attachEvent("onclick", messageSubmitted);
+    }
+
+    let phoneIcon = document.getElementById("phoneIcon");
+    if (phoneIcon.addEventListener) {
+        phoneIcon.addEventListener("click", showPhone, false);
+    } else if (phoneIcon.attachEvent) {
+        phoneIcon.attachEvent("onclick", showPhone);
+    }
+
+    let emailIcon = document.getElementById("emailIcon");
+    if (emailIcon.addEventListener) {
+        emailIcon.addEventListener("click", showEmail, false);
+    } else if (emailIcon.attachEvent) {
+        emailIcon.attachEvent("onclick", showEmail);
     }
 }
 
