@@ -4,6 +4,7 @@ Student ID: 301200673
 Date: Oct 03, 2022
  */
 
+// function that uses an alert to inform the user that the form was submitted and show information gathered in console
 function messageSubmitted() {
     let messageInformation = [];
     let firstName = document.getElementById('firstName').value;
@@ -20,6 +21,7 @@ function messageSubmitted() {
     alert('Message delivered. I will contact you as soon as I can.');
 }
 
+// function that hide phone icon and shows phone number
 function showPhone() {
     let icon = document.getElementById('phoneIcon');
     let phone = document.getElementById('phoneNumber');
@@ -27,6 +29,7 @@ function showPhone() {
     phone.style.visibility = 'visible';
 }
 
+// function that hide email icon and shows email
 function showEmail() {
     let icon = document.getElementById('emailIcon');
     let email = document.getElementById('contactEmail');
@@ -60,6 +63,7 @@ function createEventListeners() {
 function setUpPage() {
     createEventListeners();
 }
+
 
 if (window.addEventListener) {
     window.addEventListener("load", setUpPage, false);
