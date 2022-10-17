@@ -12,7 +12,7 @@ exports.render = function (req, res) {
     req.session.lastVisit = new Date();
 
     res.render('login', {
-        title: 'LOGIN',
+        title: 'Login',
         description: 'LOGIN'
     })
 }

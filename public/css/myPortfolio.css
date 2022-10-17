@@ -195,3 +195,27 @@ a:hover {
     font-weight: bold;
     color: #ac3b61;
 }
+
+.login {
+    background-color: #edc7b7;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: medium solid #ac3b61;
+}
+
+.loginInputButton {
+    width: 57px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.loginInput {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+    float: right;
+}

@@ -11,7 +11,19 @@
     <main>
         <%- include('partials/navbar.ejs') %>
         <h3><%= title %></h3>
-        <p><%= description %></p>
+        <form action="" method="post" class="login">
+            <p>
+                <label for="userName">User Name: </label>
+                <input class="loginInput" type="email" id="userName" name="userName" tabindex="1" required="required" placeholder="email">
+            </p>
+            <p>
+                <label for="userPassword">Password: </label>
+                <input class="loginInput" type="password" id="userPassword" name="userPassword" tabindex="1" required="required" placeholder="******">
+            </p>
+            <p class="loginInputButton">
+                <input  type="submit" value="Submit" />
+            </p>
+        </form>
     </main>
     <%- include('partials/footer.ejs') %>
 </div>
