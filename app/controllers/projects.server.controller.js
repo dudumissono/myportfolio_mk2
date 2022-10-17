@@ -18,7 +18,7 @@ exports.render = function (req, res) {
             title: 'Software Development',
             img: '/img/internship.png',
             alt: 'Internship',
-            description: 'Right now, I’m working as a part-time intern at a Canadian tech company. My main activity today is to update and manage content from a group of clients that uses an application built using low-code tools. Although I’m using some low-code interfaces, I’m constantly exercising programming logic and writing some custom code within the software to match the client’s requirements.',
+            description: 'Right now, I’m working as a part-time intern at a Canadian tech company. My main activity today is to update.ejs and manage content from a group of clients that uses an application built using low-code tools. Although I’m using some low-code interfaces, I’m constantly exercising programming logic and writing some custom code within the software to match the client’s requirements.',
             references: 'https://www.pixelstech.net/article/1328089711-A-brief-guide-to-tech-internships'
         },
         projectTwo: {
