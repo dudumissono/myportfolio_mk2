@@ -12,7 +12,7 @@ exports.render = function (req, res) {
     req.session.lastVisit = new Date();
 
     res.render('businessContactsList', {
-        title: 'BUSINESS CONTACTS',
+        title: 'Business Contact List',
         description: 'BUSINESS CONTACTS'
     })
 }

@@ -212,6 +212,20 @@ a:hover {
     margin-left: auto;
 }
 
+.loginInputButton input {
+    padding: 5px;
+    width: 50px;
+    background-color: #ac3b61;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+
+.loginInputButton input:hover {
+    background-color: #eee2dc;
+    color: #ac3b61;
+}
+
 .loginInput {
     padding: 5px;
     border-radius: 5px;
@@ -219,3 +233,34 @@ a:hover {
     width: 50%;
     float: right;
 }
+
+.businessContacts {
+    /*border: dashed;*/
+    border-radius: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.businessContacts th {
+    background-color: #ac3b61;
+    color: whitesmoke;
+}
+
+.businessContacts td, th {
+    border: 1px solid #ac3b61;
+    text-align: left;
+    padding: 8px;
+}
+
+.businessContacts tr:nth-child(even) {
+    background-color: #edc7b7;
+}
+
+.businessContacts i {
+    color: #ac3b61;
+    padding-left: 10px;
+}
+
+
