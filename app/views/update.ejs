@@ -12,6 +12,31 @@
         <%- include('partials/navbar.ejs') %>
         <h3><%= title %></h3>
         <p><%= description %></p>
+        <form class="updateForm">
+            <p>
+                <label for="firstName">First Name: </label>
+                <input class="contactFormInput" id="firstName" name="firstName" type="text" tabindex="1" required="required" placeholder="John">
+            </p>
+            <p>
+                <label for="lastName">Last Name: </label>
+                <input class="contactFormInput" id="lastName" name="lastName" type="text" tabindex="3" required="required" placeholder="Wick">
+            </p>
+            <p>
+                <label for="contactNumber">Contact Number: </label>
+                <input class="contactFormInput" id="contactNumber" name="contactNumber" type="text" tabindex="5" required="required" placeholder="(666) 777-5544">
+            </p>
+            <p>
+                <label for="message">Email: </label>
+                <input class="contactFormInput" id="email" name="email" tabindex="7" placeholder="you@you.ca">
+            </p>
+            <br/>
+            <hr>
+            <p id="buttons">
+                <input class="buttons" id="update" type="submit" name="btnUpdate" value="Update" tabindex="9">
+                <input class="buttons" id="reset" type="reset" name="btnReset" value="Clear" tabindex="11">
+                <input class="buttons" id="return" type="submit" name="btnCancel" value="Cancel" tabindex="13">
+            </p>
+        </form>
     </main>
     <%- include('partials/footer.ejs') %>
 </div>

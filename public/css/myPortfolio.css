@@ -263,4 +263,10 @@ a:hover {
     padding-left: 10px;
 }
 
+.updateForm {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
