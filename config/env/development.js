@@ -6,5 +6,5 @@ Date: Oct 03, 2022
 
 module.exports = {
     sessionSecret: 'developmentSessionSecret',
-    db: 'mongodb://localhost/mean-book'
+    db: 'mongodb://localhost/mean-comp229'
 }
