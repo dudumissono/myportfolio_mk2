@@ -16,9 +16,6 @@ const HOST = 'localhost';
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT);
-app.post('/contact', (req, res) => {
-    res.redirect('/');
-});
 
 console.log(`Server running at http://${HOST}:${PORT}`);
 

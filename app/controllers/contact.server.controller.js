@@ -23,3 +23,7 @@ exports.render = function (req, res) {
         }
     })
 };
+
+exports.redirect = function (req, res) {
+    res.redirect('/');
+}

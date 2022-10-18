@@ -12,10 +12,10 @@ exports.list = function (req, res, next) {
         if (err) {
             return next(err);
         } else {
-            res.render('contactsList', {
+            res.render('contacts-list', {
                 title: 'Business Contact List',
                 contacts: contacts
             })
         }
-    })
+    });
 }
