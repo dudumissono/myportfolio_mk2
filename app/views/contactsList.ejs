@@ -2,8 +2,6 @@
 <!--Student ID: 301200673-->
 <!--Date: Oct 17, 2022-->
 
-<!DOCTYPE>
-<html lang="en">
 <%- include('partials/head.ejs') %>
 <body>
 <div>
@@ -11,7 +9,7 @@
     <main>
         <%- include('partials/navbar.ejs') %>
         <h3><%= title %></h3>
-        <p><%= description %></p>
+
         <table class="businessContacts">
             <tr>
                 <th>Contact Name</th>
@@ -19,33 +17,17 @@
                 <th>Email Address</th>
                 <th>Options</th>
             </tr>
+            <% for (let counter = 0; counter < contacts.length; counter++) { %>
             <tr>
-                <td><%= description %></td>
-                <td>(666) 789-4567</td>
-                <td>dudu@dudu.ca</td>
+                <td><%= contacts[counter].firstName %> <%= contacts[counter].lastName %></td>
+                <td><%= contacts[counter].contactNumber%></td>
+                <td><%= contacts[counter].email%></td>
                 <td>
                     <i class="fa-solid fa-pen-to-square"></i>
                     <i class="fa-solid fa-trash"></i>
                 </td>
             </tr>
-            <tr>
-                <td>Dudu Missono</td>
-                <td>(666) 789-4567</td>
-                <td>dudu@dudu.ca</td>
-                <td>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td>Dudu Missono</td>
-                <td>(666) 789-4567</td>
-                <td>dudu@dudu.ca</td>
-                <td>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </td>
-            </tr>
+            <% } %>
         </table>
     </main>
     <%- include('partials/footer.ejs') %>

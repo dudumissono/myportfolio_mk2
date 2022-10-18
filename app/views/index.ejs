@@ -2,24 +2,22 @@
 <!--Student ID: 301200673-->
 <!--Date: Oct 03, 2022-->
 
-<!DOCTYPE>
-<html lang="en">
-    <%- include('partials/head.ejs') %>
-    <body>
-    <div>
-        <%- include('partials/header.ejs') %>
-        <main>
-            <%- include('partials/navbar.ejs') %>
-            <h3><%= messageOne %></h3>
-            <p><%= descriptionOne %></p>
-            <form action="/about" class="readMore">
-                <input type="submit" value="Read More" />
-            </form>
-            <hr>
-            <h4><%= messageTwo %></h4>
-            <p><%= descriptionTwo %></p>
-        </main>
-        <%- include('partials/footer.ejs') %>
-    </div>
-    </body>
+<%- include('partials/head.ejs') %>
+<body>
+<div>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <%- include('partials/navbar.ejs') %>
+        <h3><%= messageOne %></h3>
+        <p><%= descriptionOne %></p>
+        <form action="/about" class="readMore">
+            <input type="submit" value="Read More" />
+        </form>
+        <hr>
+        <h4><%= messageTwo %></h4>
+        <p><%= descriptionTwo %></p>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</div>
+</body>
 </html>
