@@ -2,14 +2,48 @@
 <!--Student ID: 301200673-->
 <!--Date: Oct 19, 2022-->
 
-<%- include('../partials/head_lv2.ejs') %>
+<%- include('../partials/head_lv3.ejs') %>
 <body>
 <div>
     <%- include('../partials/header.ejs') %>
     <main>
         <%- include('../partials/navbar.ejs') %>
         <h3><%= title %></h3>
+        <form method="post" class="addContact">
+            <p>
+                <label for="firstName">First Name</label>
+                <input class="contactFormInput" id="firstName" name="firstName" type="text" tabindex="1" required="required" value="<%= contact.firstName %>">
+            </p>
+            <p>
+                <label for="lastName">Last Name</label>
+                <input class="contactFormInput" id="lastName" name="lastName" type="text" tabindex="3" required="required" value="<%= contact.lastName %>">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input class="contactFormInput" id="email" name="email" type="email" tabindex="5" required="required" value="<%= contact.email %>">
+            </p>
+            <p>
+                <label for="contactNumber">Contact Number</label>
+                <input class="contactFormInput" id="contactNumber" name="contactNumber" type="text" tabindex="7" required="required" value="<%= contact.contactNumber %>">
+            </p>
+            <p>
+                <label for="username">User Name</label>
+                <input class="contactFormInput" id="username" name="username" type="text" tabindex="9" required="required" value="<%= contact.username %>">
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input class="contactFormInput" id="password" name="password" type="text" tabindex="11" required="required" value="<%= contact.password %>">
+            </p>
 
+            <br/>
+            <hr>
+            <p id="buttons">
+                <input class="buttons" id="submitValue" type="submit" name="btnSubmit" value="Submit" tabindex="13">
+                <a href="../list">
+                    <input class="buttons" id="reset" type="button" name="btnReset" value="Return" tabindex="15">
+                </a>
+            </p>
+        </form>
     </main>
     <%- include('../partials/footer.ejs') %>
 </div>

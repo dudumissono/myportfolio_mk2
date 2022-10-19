@@ -9,7 +9,7 @@
     <main>
         <%- include('../partials/navbar.ejs') %>
         <h3><%= title %></h3>
-        <p><a href="/contacts/add"><i class="fa-solid fa-user-plus fa-lg"></i></a></p>
+        <p><a href="/contacts/add"><i class="fa-solid fa-user-plus fa-lg contactListIcons"></i></a></p>
         <table class="businessContacts">
             <tr>
                 <th>Contact Name</th>
@@ -23,8 +23,8 @@
                 <td><%= contacts[counter].contactNumber%></td>
                 <td><%= contacts[counter].email%></td>
                 <td>
-                    <a href="/contacts/edit/<%= contacts[counter]._id %>"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="/contacts/delete/<%= contacts[counter]._id %>"><i class="fa-solid fa-trash"></i></a>
+                    <a href="/contacts/edit/<%= contacts[counter]._id %>"><i class="fa-solid fa-pen-to-square contactListIcons"></i></a>
+                    <a href="/contacts/delete/<%= contacts[counter]._id %>"><i class="fa-solid fa-trash contactListIcons"></i></a>
                 </td>
             </tr>
             <% } %>

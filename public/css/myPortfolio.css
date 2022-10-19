@@ -269,4 +269,16 @@ a:hover {
     margin-right: auto;
 }
 
+.addContact {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+.contactListIcons {
+    color: #ac3b61;
+}
+
+.contactListIcons:hover {
+    color: #123c69;
+}

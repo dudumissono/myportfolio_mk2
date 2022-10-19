@@ -28,7 +28,7 @@ module.exports = function(app) {
     app.get('/contacts/add', contactsAdd.render);
     app.post('/contacts/add', contactsAdd.insert);
     app.get('/contacts/edit/:id', contactsEdit.findById);
-    // app.post('/contacts/edit/:id', contactsEdit.update);
+    app.post('/contacts/edit/:id', contactsEdit.update);
     app.get('/contacts/delete/:id', contactsDelete.delete);
     app.get('/update', update.render);
 }

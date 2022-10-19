@@ -29,7 +29,7 @@ exports.update = function (req, res, next) {
         _id: id,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        phoneContact: req.body.phoneContact,
+        contactNumber: req.body.contactNumber,
         email: req.body.email,
         username: req.body.username,
         password: req.body.password
