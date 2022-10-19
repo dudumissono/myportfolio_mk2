@@ -11,8 +11,8 @@ exports.render = function (req, res) {
 
     req.session.lastVisit = new Date();
 
-    res.render('login', {
+    res.render('auth/login', {
         title: 'Login',
-        description: 'LOGIN'
+        messages: {}
     })
 }

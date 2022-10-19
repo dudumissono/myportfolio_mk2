@@ -198,7 +198,7 @@ a:hover {
 
 .login {
     background-color: #edc7b7;
-    width: 400px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 30px;
@@ -206,15 +206,21 @@ a:hover {
     border: medium solid #ac3b61;
 }
 
+.login a {
+    color: #ac3b61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .loginInputButton {
-    width: 57px;
+    width: 130px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .loginInputButton input {
     padding: 5px;
-    width: 50px;
+    width: 60px;
     background-color: #ac3b61;
     color: whitesmoke;
     border: none;

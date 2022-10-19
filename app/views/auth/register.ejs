@@ -1,0 +1,45 @@
+<!--Student: Eduardo Missono-->
+<!--Student ID: 301200673-->
+<!--Date: Oct 19, 2022-->
+
+<%- include('../partials/head_lv2.ejs') %>
+<body>
+<div>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <%- include('../partials/navbar.ejs') %>
+        <h3><%= title %></h3>
+        <% if (messages.length > 0) { %>
+            <div>
+                <% messages %>
+            </div>
+        <% } %>
+        <form method="post" class="login" autocomplete="off">
+            <p>
+                <label for="userName">User Name: </label>
+                <input class="loginInput" type="email" id="userName" name="userName" tabindex="1" required="required" autofocus placeholder="Enter username">
+            </p>
+            <p>
+                <label for="currentPassword">Password: </label>
+                <input class="loginInput" type="password" id="currentPassword" name="userPassword" tabindex="3" required="required" placeholder="Enter password">
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input class="loginInput" type="email" id="email" name="email" tabindex="5" required="required" placeholder="Enter Email Address">
+            </p>
+            <p>
+                <label for="displayName">Display Name: </label>
+                <input class="loginInput" type="email" id="displayName" name="displayName" tabindex="7" required="required" placeholder="Enter Display Name">
+            </p>
+            <p class="loginInputButton">
+                <input type="submit" value="Register">
+                <a href="/">
+                    <input type="button" value="Cancel">
+                </a>
+            </p>
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</div>
+</body>
+</html>

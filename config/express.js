@@ -12,6 +12,11 @@ const compress = require('compression');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
+const passport = require('passport');
+const passportLocal = require('passport-local');
+const localStrategy = passportLocal.Strategy;
+const flash = require('connect-flash');
+
 module.exports = function () {
     let app = express();
 
@@ -27,12 +32,32 @@ module.exports = function () {
     app.use(bodyParser.json());
     app.use(methodOverride());
 
+    // set up express session
     app.use(session({
         saveUninitialized: true,
         resave: true,
         secret: config.sessionSecret
     }));
 
+    // initialize flash
+    app.use(flash());
+
+    // initialize passport
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+    // passport user configuration
+
+
+    // create a user model instance
+    let userModel = require('../app/models/user.server.model');
+    // let User = userModel.User;
+
+    // serialize and deserialize the user info
+    passport.serializeUser(userModel.serializeUser());
+    passport.deserializeUser(userModel.deserializeUser());
+
+    // view engine setup
     app.set('views', './app/views/')
     app.set('view engine', 'ejs');
 
