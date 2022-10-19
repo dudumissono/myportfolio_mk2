@@ -24,7 +24,7 @@
                 <td><%= contacts[counter].email%></td>
                 <td>
                     <a href="/contacts/edit/<%= contacts[counter]._id %>"><i class="fa-solid fa-pen-to-square contactListIcons"></i></a>
-                    <a href="/contacts/delete/<%= contacts[counter]._id %>"><i class="fa-solid fa-trash contactListIcons"></i></a>
+                    <a href="/contacts/delete/<%= contacts[counter]._id %>"><i class="fa-solid fa-trash contactListIcons delete"></i></a>
                 </td>
             </tr>
             <% } %>
@@ -32,5 +32,6 @@
     </main>
     <%- include('../partials/footer.ejs') %>
 </div>
+<script src="/js/list.js"></script>
 </body>
 </html>

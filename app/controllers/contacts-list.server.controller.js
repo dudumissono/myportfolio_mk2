@@ -17,5 +17,5 @@ exports.list = function (req, res, next) {
                 contacts: contacts
             })
         }
-    });
+    }).sort("firstName");
 }
