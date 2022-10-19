@@ -2,14 +2,14 @@
 <!--Student ID: 301200673-->
 <!--Date: Oct 17, 2022-->
 
-<%- include('partials/head.ejs') %>
+<%- include('../partials/head_lv2.ejs') %>
 <body>
 <div>
-    <%- include('partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
     <main>
-        <%- include('partials/navbar.ejs') %>
+        <%- include('../partials/navbar.ejs') %>
         <h3><%= title %></h3>
-        <p><a href="/contacts-add"><i class="fa-solid fa-user-plus fa-lg"></i></a></p>
+        <p><a href="/contacts/add"><i class="fa-solid fa-user-plus fa-lg"></i></a></p>
         <table class="businessContacts">
             <tr>
                 <th>Contact Name</th>
@@ -23,14 +23,14 @@
                 <td><%= contacts[counter].contactNumber%></td>
                 <td><%= contacts[counter].email%></td>
                 <td>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <a href="/contacts/edit/<%= contacts[counter]._id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/contacts/delete/<%= contacts[counter]._id %>"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
             <% } %>
         </table>
     </main>
-    <%- include('partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </div>
 </body>
 </html>

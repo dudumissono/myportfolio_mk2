@@ -1,21 +1,20 @@
 /*
 Student: Eduardo Missono
 Student ID: 301200673
-Date: Oct 14, 2022
+Date: Oct 19, 2022
  */
 
 const mongoose = require('../../config/mongoose');
 const Contact = require('../models/contact.server.model');
 
-exports.list = function (req, res, next) {
-    Contact.find({}, (err, contacts) => {
+exports.delete = function (req, res, next) {
+    let id = req.params.id;
+
+    Contact.remove({_id: id}, (err) => {
         if (err) {
             return next(err);
         } else {
-            res.render('contacts/list', {
-                title: 'Business Contact List',
-                contacts: contacts
-            })
+            res.redirect('/contacts/list');
         }
     });
 }

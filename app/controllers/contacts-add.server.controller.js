@@ -8,7 +8,7 @@ const mongoose = require('../../config/mongoose');
 const Contact = require('../models/contact.server.model');
 
 exports.render = function (req, res, next) {
-    res.render('contacts-add', {
+    res.render('contacts/add', {
         title: 'Add Contact'
     })
 }
@@ -28,7 +28,7 @@ exports.insert = function (req, res, next) {
            return next(err);
        } else {
            console.log(`contact saved`);
-           res.redirect('/contacts-list');
+           res.redirect('/contacts/list');
        }
     });
 }
