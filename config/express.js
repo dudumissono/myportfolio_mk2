@@ -51,12 +51,14 @@ module.exports = function () {
 
     // create a user model instance
     let userModel = require('../app/models/user.server.model');
-
-    // let User = userModel.User;
+    let User = userModel.User;
 
     // serialize and deserialize the user info
-    passport.serializeUser(userModel.serializeUser());
-    passport.deserializeUser(userModel.deserializeUser());
+    passport.serializeUser(User.serializeUser());
+    passport.deserializeUser(User.deserializeUser());
+
+    // implement a User Authentication Strategy
+    passport.use(User.createStrategy());
 
     // view engine setup
     app.set('views', './app/views/')

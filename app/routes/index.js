@@ -4,33 +4,46 @@ Student ID: 301200673
 Date: Oct 03, 2022
  */
 
-const index = require("../controllers/index.server.controller");
-const about = require("../controllers/about.server.controller");
-const projects = require("../controllers/projects.server.controller");
-const services = require("../controllers/services.server.controller");
-const contact = require("../controllers/contact.server.controller");
-const login = require("../controllers/login.server.controller");
-const contactsList = require("../controllers/contacts-list.server.controller");
-const contactsAdd = require("../controllers/contacts-add.server.controller");
-const contactsEdit = require("../controllers/contacts-edit.server.controller");
-const contactsDelete = require("../controllers/contacts-delete.server.controller")
+let passport = require('passport');
+
+// helper function for guard purposes
+function requiredAuth(req, res, next) {
+    // check if user is logged in
+    if (!req.isAuthenticated()){
+        return res.redirect('../login');
+    }
+    next();
+}
+
+const indexController = require("../controllers/index.server.controller");
+const aboutController = require("../controllers/about.server.controller");
+const projectsController = require("../controllers/projects.server.controller");
+const servicesController = require("../controllers/services.server.controller");
+const contactController = require("../controllers/contact.server.controller");
+const loginController = require("../controllers/login.server.controller");
+const logoutController = require("../controllers/logout.server.controller");
+const registerController = require("../controllers/register.server.controller");
+const contactsListController = require("../controllers/contacts-list.server.controller");
+const contactsAddController = require("../controllers/contacts-add.server.controller");
+const contactsEditController = require("../controllers/contacts-edit.server.controller");
+const contactsDeleteController = require("../controllers/contacts-delete.server.controller");
 
 module.exports = function(app) {
-    app.get('/', index.render);
-    app.get('/about', about.render);
-    app.get('/projects', projects.render);
-    app.get('/services', services.render);
-    app.get('/contact', contact.render);
-    app.post('/contact', contact.redirect);
-    app.get('/login', login.render);
-    app.post('/login', login.processingLoginPage);
-    app.get('/register', login.render);
-    // app.post('/register', login.render);
-    app.get('/logout', login.render);
-    app.get('/contacts/list', contactsList.list);
-    app.get('/contacts/add', contactsAdd.render);
-    app.post('/contacts/add', contactsAdd.insert);
-    app.get('/contacts/edit/:id', contactsEdit.findById);
-    app.post('/contacts/edit/:id', contactsEdit.update);
-    app.get('/contacts/delete/:id', contactsDelete.delete);
+    app.get('/', indexController.render);
+    app.get('/about', aboutController.render);
+    app.get('/projects', projectsController.render);
+    app.get('/services', servicesController.render);
+    app.get('/contact', contactController.render);
+    app.post('/contact', contactController.redirect);
+    app.get('/login', loginController.render);
+    app.post('/login', loginController.processLoginPage);
+    app.get('/register', registerController.render);
+    app.post('/register', registerController.processRegisterPage);
+    app.get('/logout', logoutController.performLogout);
+    app.get('/contacts/list', requiredAuth, contactsListController.list);
+    app.get('/contacts/add', requiredAuth, contactsAddController.render);
+    app.post('/contacts/add', requiredAuth, contactsAddController.insert);
+    app.get('/contacts/edit/:id', requiredAuth, contactsEditController.findById);
+    app.post('/contacts/edit/:id', requiredAuth, contactsEditController.update);
+    app.get('/contacts/delete/:id', requiredAuth, contactsDeleteController.delete);
 }

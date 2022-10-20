@@ -7,9 +7,6 @@ Date: Oct 14, 2022
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-const userModel = require('../models/user.server.model');
-let User = userModel.User;
-
 exports.render = function (req, res) {
     if(req.session.lastVisit) {
         console.log(req.session.lastVisit);
@@ -29,7 +26,7 @@ exports.render = function (req, res) {
     }
 }
 
-exports.processingLoginPage = function (req, res, next) {
+exports.processLoginPage = function (req, res, next) {
     passport.authenticate('local',(err, user, info) => {
         // user error?
         if (err) {
@@ -43,7 +40,7 @@ exports.processingLoginPage = function (req, res, next) {
         }
         req.login(user, (err) => {
             if (err) {
-                return next(err)
+                return next(err);
             }
             return res.redirect('/contacts/list');
         });
