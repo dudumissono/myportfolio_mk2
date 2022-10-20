@@ -22,7 +22,11 @@ module.exports = function(app) {
     app.get('/services', services.render);
     app.get('/contact', contact.render);
     app.post('/contact', contact.redirect);
-    app.get('/auth/login', login.render);
+    app.get('/login', login.render);
+    app.post('/login', login.processingLoginPage);
+    app.get('/register', login.render);
+    // app.post('/register', login.render);
+    app.get('/logout', login.render);
     app.get('/contacts/list', contactsList.list);
     app.get('/contacts/add', contactsAdd.render);
     app.post('/contacts/add', contactsAdd.insert);

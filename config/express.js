@@ -51,6 +51,7 @@ module.exports = function () {
 
     // create a user model instance
     let userModel = require('../app/models/user.server.model');
+
     // let User = userModel.User;
 
     // serialize and deserialize the user info
