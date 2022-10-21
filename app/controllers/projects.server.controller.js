@@ -13,6 +13,7 @@ exports.render = function (req, res) {
 
     res.render('projects', {
         title: 'Projects',
+        displayName: req.user ? req.user.displayName : "",
         description: 'As my tech career is just beginning, I decided to list here one tech job and two other projects that I’ve worked on before.',
         projectOne: {
             title: 'Software Development',

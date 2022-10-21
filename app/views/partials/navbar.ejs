@@ -3,14 +3,19 @@
 <!--Date: Oct 03, 2022-->
 
 <nav>
-    <a href="/" class="logo">eduDev</a> |
-    <a href="/about">About Me</a> |
-    <a href="/projects">Projects</a> |
-    <a href="/services">Services</a> |
-    <a href="/contact">Contact Me</a> |
-    <a href="/login">Login</a> |
-    <a href="/logout">Logout</a> |
-    <a href="/contacts/list">Contacts</a>
-    <a href="https://github.com/dudumissono" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
-    <a href="https://www.linkedin.com/in/eduardomissono/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    <a href="/" class="logo">eduDev</a>
+    | <a href="/about">About Me</a>
+    | <a href="/projects">Projects</a>
+    | <a href="/services">Services</a>
+    | <a href="/contact">Contact Me</a>
+
+    <% if (typeof displayName == "string" && displayName) { %>
+        | <a href="/contacts/list">Contacts</a>
+        | <a href="/logout">Logout</a>
+        <a class="welcome">Welcome, <%= displayName %></a>
+    <% } else { %>
+        | <a href="/login">Login</a>
+        <a href="https://github.com/dudumissono" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="https://www.linkedin.com/in/eduardomissono/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+    <% } %>
 </nav>

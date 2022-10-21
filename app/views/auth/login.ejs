@@ -10,8 +10,8 @@
         <%- include('../partials/navbar.ejs') %>
         <h3><%= title %></h3>
         <% if (messages.length > 0) { %>
-            <div>
-                <% messages %>
+            <div class="errorBanner">
+                <%= messages %>
             </div>
         <% } %>
         <form method="post" class="login" autocomplete="off">

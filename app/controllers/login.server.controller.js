@@ -33,12 +33,14 @@ exports.processLoginPage = function (req, res, next) {
             return next(err);
         }
 
+        // console.log(user)
         // is there a user login error?
         if (!user) {
             req.flash('loginMessage', 'Authentication Error');
             return res.redirect('/login');
         }
         req.login(user, (err) => {
+            // server error?
             if (err) {
                 return next(err);
             }

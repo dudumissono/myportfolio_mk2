@@ -14,6 +14,7 @@ exports.list = function (req, res, next) {
         } else {
             res.render('contacts/list', {
                 title: 'Business Contact List',
+                displayName: req.user ? req.user.displayName : "",
                 contacts: contacts
             })
         }

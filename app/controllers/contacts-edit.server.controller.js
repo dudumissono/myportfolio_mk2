@@ -16,6 +16,7 @@ exports.findById = function (req, res, next) {
         } else {
             res.render('contacts/edit', {
                 title: 'Edit Contact',
+                displayName: req.user ? req.user.displayName : "",
                 contact: contactToEdit
             })
         }

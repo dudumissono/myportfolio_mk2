@@ -13,6 +13,7 @@ exports.render = function (req, res) {
 
     res.render('services', {
         title: 'Services',
+        displayName: req.user ? req.user.displayName : "",
         description: '',
         serviceOne: {
             title: 'Back End Development',

@@ -34,8 +34,8 @@ module.exports = function () {
 
     // set up express session
     app.use(session({
-        saveUninitialized: true,
-        resave: true,
+        saveUninitialized: false,
+        resave: false,
         secret: config.sessionSecret
     }));
 
@@ -47,7 +47,6 @@ module.exports = function () {
     app.use(passport.session());
 
     // passport user configuration
-
 
     // create a user model instance
     let userModel = require('../app/models/user.server.model');

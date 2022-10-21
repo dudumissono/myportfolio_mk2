@@ -4,6 +4,7 @@ Student ID: 301200673
 Date: Oct 03, 2022
  */
 
+
 exports.render = function (req, res) {
     if(req.session.lastVisit) {
         console.log(req.session.lastVisit);
@@ -13,6 +14,7 @@ exports.render = function (req, res) {
 
     res.render('index', {
         title: 'Home',
+        displayName: req.user ? req.user.displayName : "",
         messageOne: 'Welcome',
         descriptionOne: 'Hey, I’m Eduardo and welcome to my portfolio. I designed this page so you can have the opportunity to know about myself and my work.',
         messageTwo: 'Mission Statement',

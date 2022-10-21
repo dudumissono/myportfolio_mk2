@@ -288,3 +288,19 @@ a:hover {
 .contactListIcons:hover {
     color: #123c69;
 }
+
+.welcome {
+    float: right;
+    color: whitesmoke;
+}
+
+.errorBanner {
+    width: 526px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ac3b61;
+    color: #edc7b7;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

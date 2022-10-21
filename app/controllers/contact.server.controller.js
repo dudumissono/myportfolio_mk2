@@ -13,6 +13,7 @@ exports.render = function (req, res) {
 
     res.render('contact', {
         title: 'Contact',
+        displayName: req.user ? req.user.displayName : "",
         description: 'Please fill out the form and I will return it as soon as possible. If you prefer you can contact me directly. Information below.',
         contactInfo: {
             name: 'Eduardo Missono',

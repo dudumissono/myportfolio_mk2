@@ -9,7 +9,8 @@ const Contact = require('../models/contact.server.model');
 
 exports.render = function (req, res, next) {
     res.render('contacts/add', {
-        title: 'Add Contact'
+        title: 'Add Contact',
+        displayName: req.user ? req.user.displayName : ""
     })
 }
 
