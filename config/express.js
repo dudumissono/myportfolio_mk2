@@ -49,8 +49,8 @@ module.exports = function () {
     // passport user configuration
 
     // create a user model instance
-    let userModel = require('../app/models/user.server.model');
-    let User = userModel.User;
+    let User = require('../app/models/user.server.model');
+    // let User = userModel.User;
 
     // serialize and deserialize the user info
     passport.serializeUser(User.serializeUser());

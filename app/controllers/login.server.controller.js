@@ -33,7 +33,7 @@ exports.processLoginPage = function (req, res, next) {
             return next(err);
         }
 
-        // console.log(user)
+        console.log(info)
         // is there a user login error?
         if (!user) {
             req.flash('loginMessage', 'Authentication Error');

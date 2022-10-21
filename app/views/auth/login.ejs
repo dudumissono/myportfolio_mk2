@@ -2,7 +2,7 @@
 <!--Student ID: 301200673-->
 <!--Date: Oct 17, 2022-->
 
-<%- include('../partials/head_lv2.ejs') %>
+<%- include('../partials/head.ejs') %>
 <body>
 <div>
     <%- include('../partials/header.ejs') %>
@@ -16,12 +16,12 @@
         <% } %>
         <form method="post" class="login" autocomplete="off">
             <p>
-                <label for="userName">User Name </label>
-                <input class="loginInput" type="text" id="userName" name="userName" tabindex="1" required="required" autofocus placeholder="Enter username">
+                <label for="username">User Name </label>
+                <input class="loginInput" type="text" id="username" name="username" tabindex="1" required="required" autofocus placeholder="Enter username">
             </p>
             <p>
-                <label for="currentPassword">Password </label>
-                <input class="loginInput" type="password" id="currentPassword" name="userPassword" tabindex="3" required="required" placeholder="Enter password">
+                <label for="password">Password </label>
+                <input class="loginInput" type="password" id="password" name="password" tabindex="3" required="required" placeholder="Enter password">
                 or
                 <a href="/register">Register Here</a>
             </p>

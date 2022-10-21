@@ -7,8 +7,8 @@ Date: Oct 20, 2022
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-const userModel = require('../models/user.server.model');
-let User = userModel.User;
+const User = require('../models/user.server.model');
+// let User = userModel.User;
 
 exports.render = function (req, res) {
     if(req.session.lastVisit) {

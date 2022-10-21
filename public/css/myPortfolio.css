@@ -294,6 +294,10 @@ a:hover {
     color: whitesmoke;
 }
 
+.welcome:hover {
+    color: whitesmoke;
+}
+
 .errorBanner {
     width: 526px;
     text-align: center;
